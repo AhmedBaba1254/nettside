@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-form {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      color: white;
+    }
+
+    .contact-form h1 {
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #f0a500;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff8800;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Logo">
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-form">
+      <h1>Kontakt</h1>
+      <form action="#" method="post">
+        <label for="name">Navn</label>
+        <input type="text" id="name" name="name" placeholder="Ditt navn" required>
+
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="email" placeholder="Din e-post" required>
+
+        <label for="message">Melding</label>
+        <textarea id="message" name="message" rows="5" placeholder="Din melding..." required></textarea>
+
+        <button type="submit">Send Melding</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

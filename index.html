@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+    }
+
+    /* Navigation Bar Styles */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    nav .logo img {
+      width: 120px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      color: #f0a500;
+      transform: scale(1.1);
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      text-decoration: none;
+      background: #f0a500;
+      padding: 15px 30px;
+      color: #fff;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 40px;
+    }
+
+    .cta-button:hover {
+      background: #ff8800;
+    }
+
+    /* Image styling */
+    .side-image {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .side-image:hover {
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero {
+        padding: 80px 10px;
+      }
+
+      .hero h1 {
+        font-size: 2.5em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      .side-image {
+        position: static;
+        width: 80%;
+        margin: 20px auto;
+        display: block;
+        transform: scale(1); /* No translate on mobile */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
+
+      .side-image {
+        width: 100%;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="FutureSpace Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="image-gallery.html">Image Gallery</a></li>
+        <li><a href="avatar.html">Avatar</a></li>
+        <li><a href="digital-klokke.html">Digital Klokke</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 id="hero-text"></h1>
+    <p>Utforsk min nettside</p>
+    <a href="portfolio.html" class="cta-button">Utforsk Prosjekter</a>
+    <img src="/Users/ahmaa009/Documents/1IM prosjekter/Nettide/project/meg selv.png" alt="Your Image Description" class="side-image">
+  </section>
+
+  <script>
+    // Text animation
+    const text = "Velkommen!";
+    const heroText = document.getElementById('hero-text');
+    text.split('').forEach((letter, index) => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      heroText.appendChild(span);
+
+      setTimeout(() => {
+        span.style.opacity = 1;
+      }, index * 100);
+    });
+  </script>
+</body>
+</html>
